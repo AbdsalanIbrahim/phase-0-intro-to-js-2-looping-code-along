@@ -1,25 +1,27 @@
-function writeCards(names, event) {
-  let messages = [];
-  
-  for (let i = 0; i < names.length; i++) {
-    let message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`;
-    
-    messages.push(message);
-  }
-  
-  return messages;
+const gifts = ["Teddy Bear", "Drone", "Doll"];
+
+function displayGifts() {
+    const giftList = document.getElementById('giftList');
+    giftList.innerHTML = '';  
+
+    gifts.forEach(gift => {
+        const listItem = document.createElement('li');
+        listItem.textContent = gift;
+        giftList.appendChild(listItem);
+    });
 }
 
-const thankYouMessages = writeCards(["Charlie", "Samip", "Ali"], "birthday");
-console.log(thankYouMessages);
+function addGift(event) {
+    event.preventDefault();  
+    const newGift = document.getElementById('newGift').value;
 
-
-function countDown(number) {
-  while (number >= 0) {
-    console.log(number);
-    
-    number--;
-  }
+    if (newGift) {
+        gifts.push(newGift);  
+        displayGifts();  
+        document.getElementById('newGift').value = '';  
+    }
 }
 
-countDown(10);
+document.getElementById('giftForm').addEventListener('submit', addGift);
+
+displayGifts();

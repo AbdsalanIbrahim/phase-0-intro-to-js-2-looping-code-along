@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JavaScript Looping and Iteration Codealong</title>
-  <meta name="description" content="Practice looping in JavaScript">
-  <meta name="author" content="Flatiron School">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  hello
-  <script type="text/javascript" src="index.js"></script>
+    <h1>Gift List</h1>
+    <ul id="giftList"></ul>
+
+    <form id="giftForm">
+        <input type="text" id="newGift" placeholder="Enter a new gift" required>
+        <button type="submit">Add Gift</button>
+    </form>
+
+    <script src="index.js"></script> 
 </body>
 </html>
